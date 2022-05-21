@@ -6,9 +6,9 @@ Pronounced "MC" as in the master of ceremonies.
 
 ## Background
 
-In the last three jobs I've worked at, it's always been a hassle to trying to locate the various dashboards,
-documentation, and support for a given project. I joined effx to try and help address just that. As I've been spinning
-up a new cluster, I found myself wanting a landing page for the systems that I use regularly.
+In the last three jobs I've worked at, it's always been a hassle trying to locate the various dashboards, documentation,
+and support for a given project. I joined effx to try and help address just that. As I've been spinning up a new cluster,
+I found myself wanting a landing page for the systems that I use regularly.
 
 ## Building your catalog
 
