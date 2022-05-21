@@ -4,7 +4,7 @@
 package service
 
 import (
-	"github.com/mjpitz/mjpitz/apps/emc/internal/catalog/linkgroup"
+	"github.com/mjpitz/emc/catalog/linkgroup"
 )
 
 // New constructs a spec given a label and set of options.
