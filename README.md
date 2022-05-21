@@ -65,6 +65,6 @@ $ go run ./catalog.go
 ```
 
 This starts a web server for you to interact with on `localhost:8080`. If `:8080` is already in use, you can configure
-the bind address be passing the `-bind_address` flag with the desired host and port.
+the bind address by passing the `-bind_address` flag with the desired host and port.
 
 ![Screenshot](screenshot.png)
