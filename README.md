@@ -1,6 +1,6 @@
 # emc
 
-_The minimally declarative service catalog._
+_The minimal, declarative service catalog._
 
 Pronounced "MC" as in the master of ceremonies.
 
