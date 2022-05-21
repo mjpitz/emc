@@ -40,7 +40,16 @@ func Serve(options ...Option) {
 
 	start := time.Now()
 
-	t := template.Must(template.New("catalog").Parse(catalog))
+	t := template.Must(template.New("catalog").
+		Funcs(map[string]any{
+			"mod": func(mod, v int) int {
+				return v % mod
+			},
+			"eq": func(exp, act int) bool {
+				return exp == act
+			},
+		}).
+		Parse(catalog))
 
 	spec := Spec{}
 	for _, opt := range options {

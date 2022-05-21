@@ -10,8 +10,7 @@ import (
 // New constructs a spec given a label and set of options.
 func New(label string, options ...Option) Spec {
 	spec := Spec{
-		Label:    label,
-		Metadata: make(map[string]string),
+		Label: label,
 	}
 
 	for _, opt := range options {
@@ -24,13 +23,19 @@ func New(label string, options ...Option) Spec {
 // Option defines an optional component of the spec.
 type Option func(spec *Spec)
 
+// KV defines a metadata entry.
+type KV struct {
+	Key   string
+	Value string
+}
+
 // Spec defines the elements needed to render a service.
 type Spec struct {
 	Label       string
 	LogoURL     string
 	Description string
 	URL         string
-	Metadata    map[string]string
+	Metadata    []KV
 	LinkGroups  []linkgroup.Spec
 }
 
@@ -56,9 +61,19 @@ func URL(url string) Option {
 }
 
 // Metadata allows additional metadata to be attached to a service.
-func Metadata(key, value string) Option {
+func Metadata(kvs ...string) Option {
+	// ensure even number of parameters
+	if len(kvs)%2 > 0 {
+		kvs = append(kvs, "")
+	}
+
 	return func(spec *Spec) {
-		spec.Metadata[key] = value
+		for i := 0; i < len(kvs); i += 2 {
+			spec.Metadata = append(spec.Metadata, KV{
+				Key:   kvs[i],
+				Value: kvs[i+1],
+			})
+		}
 	}
 }
 
