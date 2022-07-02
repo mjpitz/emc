@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/mjpitz/emc/catalog"
-	"github.com/mjpitz/emc/catalog/linkgroup"
-	"github.com/mjpitz/emc/catalog/service"
+	"code.pitz.tech/mya/emc/catalog"
+	"code.pitz.tech/mya/emc/catalog/linkgroup"
+	"code.pitz.tech/mya/emc/catalog/service"
 )
 
 func main() {

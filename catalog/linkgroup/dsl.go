@@ -4,7 +4,7 @@
 package linkgroup
 
 import (
-	"github.com/mjpitz/emc/catalog/link"
+	"code.pitz.tech/mya/emc/catalog/link"
 )
 
 func New(label string, options ...Option) Spec {

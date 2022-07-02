@@ -15,7 +15,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/mjpitz/emc/catalog/service"
+	"code.pitz.tech/mya/emc/catalog/service"
 )
 
 //go:embed index.html.tpl
